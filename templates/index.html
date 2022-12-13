@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0; /*reset default margin*/
+        }
+
+        #app {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            margin-top: auto;
+            background-color: #7957d5;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+
+    <section class="hero is-primary is-small mb-5">
+        <div class="hero-body">
+            <p class="title">
+                Hey, this is random gif generator!
+            </p>
+        </div>
+    </section>
+
+    <section class="has-text-centered">
+        <img src="{{ image_file }}"/>
+    </section>
+
+    <section class="footer is-primary pb-4 pt-4">
+        <div class="has-text-centered">
+            <p>
+                <i>Just refresh the page and enjoy</i>
+            </p>
+        </div>
+    </section>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
